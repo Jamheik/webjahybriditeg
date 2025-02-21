@@ -14,7 +14,6 @@ export default function App() {
     fetch(`${url}key=${API_KEY}&q=${city}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setWeatherText(
           `Weather in ${data.location.name}: Temperature = ${data.current.temp_c}°C`
         );
